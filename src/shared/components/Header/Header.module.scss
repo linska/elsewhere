@@ -1,0 +1,41 @@
+@use '@/shared/styles/breakpoints' as *;
+
+.header {
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  height: 72px;
+  padding: 16px;
+}
+
+.brand,
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 12px;
+}
+
+.actions {
+  gap: 8px;
+}
+
+.mobile {
+  display: flex;
+
+  @include md-and-up {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include md-and-up {
+    display: flex;
+  }
+}

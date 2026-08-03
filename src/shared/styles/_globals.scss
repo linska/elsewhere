@@ -1,0 +1,30 @@
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background-color: rgb(var(--background));
+  color: rgb(var(--text-primary));
+  font-family: var(--font-family), sans-serif;
+  font-size: var(--text);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.container {
+  flex-grow: 1;
+
+  padding: 16px;
+}
+
+.public {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

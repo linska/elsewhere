@@ -1,0 +1,126 @@
+$breakpoint-sm: 600px;
+$breakpoint-md: 840px;
+$breakpoint-lg: 1145px;
+$breakpoint-xl: 1545px;
+$breakpoint-xxl: 2138px;
+
+$breakpoint-gap: 0.02px;
+
+// Only
+
+// < 600px
+@mixin xs-only {
+  @media screen and (max-width: #{$breakpoint-sm - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// 600px–839.98px
+@mixin sm-only {
+  @media screen and
+  (min-width: #{$breakpoint-sm}) and
+  (max-width: #{$breakpoint-md - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// 840px–1144.98px
+@mixin md-only {
+  @media screen and
+  (min-width: #{$breakpoint-md}) and
+  (max-width: #{$breakpoint-lg - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// 1145px–1544.98px
+@mixin lg-only {
+  @media screen and
+  (min-width: #{$breakpoint-lg}) and
+  (max-width: #{$breakpoint-xl - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// 1545px–2137.98px
+@mixin xl-only {
+  @media screen and
+  (min-width: #{$breakpoint-xl}) and
+  (max-width: #{$breakpoint-xxl - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// >= 2138px
+@mixin xxl-only {
+  @media screen and (min-width: #{$breakpoint-xxl}) {
+    @content;
+  }
+}
+
+// And down
+
+// < 840px
+@mixin sm-and-down {
+  @media screen and (max-width: #{$breakpoint-md - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// < 1145px
+@mixin md-and-down {
+  @media screen and (max-width: #{$breakpoint-lg - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// < 1545px
+@mixin lg-and-down {
+  @media screen and (max-width: #{$breakpoint-xl - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// < 2138px
+@mixin xl-and-down {
+  @media screen and (max-width: #{$breakpoint-xxl - $breakpoint-gap}) {
+    @content;
+  }
+}
+
+// And up
+
+// >= 600px
+@mixin sm-and-up {
+  @media screen and (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+// >= 840px
+@mixin md-and-up {
+  @media screen and (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+// >= 1145px
+@mixin lg-and-up {
+  @media screen and (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+// >= 1545px
+@mixin xl-and-up {
+  @media screen and (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+// >= 2138px
+@mixin xxl-and-up {
+  @media screen and (min-width: #{$breakpoint-xxl}) {
+    @content;
+  }
+}

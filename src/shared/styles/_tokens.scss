@@ -1,0 +1,39 @@
+:root {
+  --primary: 44 143 166;
+  --primary-hover: 56 165 189;
+  --primary-active: 35 111 130;
+
+  --gray-100: 238 243 248;
+  --gray-85: 167 179 193;
+  --gray-70: 82 102 128;
+  --gray-55: 39 50 65;
+  --gray-40: 33 42 52;
+  --gray-25: 26 33 42;
+  --gray-0: 21 27 34;
+
+  --error: 246 80 106;
+  --info: 96 145 229;
+  --warning: 198 142 47;
+  --success: 47 157 106;
+
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-85);
+  --text-disabled: var(--gray-70);
+
+  --background: var(--gray-0);
+  --background-alt: var(--gray-25);
+  --surface: var(--gray-40);
+
+  --border: var(--gray-55);
+
+  --opacity-subtle: 12%;
+  --opacity-border: 36%;
+  --opacity-focus: 44%;
+
+  --opacity-error-subtle: 8%;
+  --opacity-error-border: 24%;
+
+  --transition: 0.3s ease-in-out;
+
+  --divider: 1px solid rgb(var(--gray-40));
+}
