@@ -39,26 +39,12 @@
 }
 
 .dropzone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 16px;
-
-  width: 100%;
   max-width: 600px;
-  padding: 62px;
-
   cursor: pointer;
-  border: 1px solid rgb(var(--gray-55));
-  border-radius: 32px;
-  background-color: rgb(var(--gray-40));
-  box-shadow: 0 0 16px 0 rgb(var(--primary-active) / var(--opacity-border))
-    inset;
 
   @include md-and-up {
     max-width: 800px;
-    padding: 82px;
   }
 }
 

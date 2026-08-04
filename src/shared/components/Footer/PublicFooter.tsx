@@ -14,12 +14,14 @@ function PublicFooter({ className }: Props) {
         variant="ghost"
         color="secondary"
         size="small"
+        href="/privacy-policy"
       />
       <Button
         text="Terms and conditions"
         variant="ghost"
         color="secondary"
         size="small"
+        href="/terms-and-conditions"
       />
     </footer>
   );

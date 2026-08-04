@@ -52,7 +52,7 @@ export default function UploadDropzone({ onFilesSelect }: Props) {
       </h1>
       <h3 className={styles.subtitle}>Set the rules. Change them anytime.</h3>
       <div
-        className={clsx(styles.dropzone, {
+        className={clsx(styles.dropzone, 'card', {
           [styles.dragging]: isDragging,
         })}
         role="button"

@@ -37,17 +37,23 @@ function PublicHeader({ className }: Props) {
         </div>
 
         <div className={clsx(styles.actions, styles.mobile)}>
-          <Button text="Log In" color="secondary" size="small" />
+          <Button text="Log In" href="/login" color="secondary" size="small" />
         </div>
         <div className={clsx(styles.actions, styles.desktop)}>
           <LanguageToggle />
           <Button
             text="Log In"
+            href="/login"
             variant="ghost"
             color="secondary"
             size="small"
           />
-          <Button text="Sign Up" color="secondary" size="small" />
+          <Button
+            text="Sign Up"
+            href="/register"
+            color="secondary"
+            size="small"
+          />
         </div>
       </header>
       <PublicAside isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />

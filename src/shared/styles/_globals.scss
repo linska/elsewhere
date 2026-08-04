@@ -1,3 +1,5 @@
+@use '@/shared/styles/breakpoints' as *;
+
 body {
   position: relative;
   display: flex;
@@ -27,4 +29,24 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+  width: 100%;
+  padding: 62px;
+
+  border: 1px solid rgb(var(--gray-55));
+  border-radius: 32px;
+  background-color: rgb(var(--gray-40));
+  box-shadow: 0 0 16px 0 rgb(var(--primary-active) / var(--opacity-border))
+    inset;
+
+  @include md-and-up {
+    padding: 82px;
+  }
 }

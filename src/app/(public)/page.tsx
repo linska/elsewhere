@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Upload and share your files securely.',
 };
 
-export default function Home() {
+export default function HomePage() {
   return <FileUpload />;
 }

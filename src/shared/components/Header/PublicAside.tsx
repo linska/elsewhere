@@ -1,7 +1,6 @@
 'use client';
 
 import clsx from 'clsx';
-import Link from 'next/link';
 
 import Button from '@/shared/components/Button';
 
@@ -54,12 +53,20 @@ export default function PublicAside({ isOpen, onClose }: Props) {
               styles.borderTop,
             )}
           >
-            <Button text="Log In" color="secondary" fullWidth />
+            <Button
+              text="Log In"
+              color="secondary"
+              fullWidth
+              href="/login"
+              onClick={onClose}
+            />
             <Button
               text="Sign Up"
               color="secondary"
               variant="outlined"
               fullWidth
+              href="/register"
+              onClick={onClose}
             />
           </div>
         </nav>
