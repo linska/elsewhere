@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elsewhere
+
+A file-sharing application built with Next.js.
+
+Users can upload and organize files and folders, generate sharing links, and manage their uploaded files. Anonymous file uploads are supported through guest sessions.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- SCSS Modules
+- PostgreSQL
+- Prisma
 
 ## Getting Started
 
-First, run the development server:
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Environment variables
+
+Create a `.env` file in the project root:
+
+```env
+DATABASE_URL="postgresql://USER@localhost:5432/elsewhere"
+```
+
+### Database setup
+
+Generate Prisma Client:
+
+```bash
+npm run db:generate
+```
+
+Apply database migrations:
+
+```bash
+npm run db:migrate
+```
+
+### Run the application
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Database
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application uses PostgreSQL with Prisma ORM.
 
-## Learn More
+Current core entities:
 
-To learn more about Next.js, take a look at the following resources:
+- `User` — registered or anonymous user
+- `Folder` — user-owned collection of files
+- `File` — metadata for an uploaded file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Uploaded file contents are not stored directly in PostgreSQL. The database stores file metadata and references to external file storage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Status
 
-## Deploy on Vercel
+Work in progress.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### [Figma design](https://www.figma.com/design/1Gjt6RBliMQ2RlPJHv7rbT/Anna-Sorotiuk---Transfer-Service---Elsewhere?node-id=822-12471&t=tUgC2hTQeWQv2HkD-1)
